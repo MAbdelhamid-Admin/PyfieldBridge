@@ -19,6 +19,9 @@ htmlcov/
 .tox/
 .nox/
 
+# Generated documentation
+site/
+
 # Virtual environments
 .venv/
 venv/

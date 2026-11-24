@@ -34,7 +34,12 @@ classifiers = [
 Homepage = "https://github.com/MAbdelhamid-Admin/PyfieldBridge"
 Repository = "https://github.com/MAbdelhamid-Admin/PyfieldBridge"
 Issues = "https://github.com/MAbdelhamid-Admin/PyfieldBridge/issues"
-"TypeScript implementation" = "https://github.com/MAbdelhamid-Admin/fieldBridge"
+"Node.js / TypeScript version" = "https://github.com/MAbdelhamid-Admin/fieldBridge"
+Documentation = "https://mabdelhamid-admin.github.io/PyfieldBridge/"
+
+[project.optional-dependencies]
+docs = ["pdoc>=15"]
+dev = ["pytest>=8", "pdoc>=15"]
 
 [tool.setuptools.packages.find]
 include = ["fieldbridge*", "pyfieldbridge*"]
