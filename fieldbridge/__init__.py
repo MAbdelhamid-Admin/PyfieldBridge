@@ -2,8 +2,8 @@
 Validated conversion of frame envelopes between industrial and automotive
 protocols.
 
-PyfieldBridge converts the **envelope** of a frame — addresses, identifiers,
-payload limits and metadata — while preserving the payload bytes exactly.
+PyfieldBridge converts the **envelope** of a frame: addresses, identifiers,
+payload limits and metadata, while preserving the payload bytes exactly.
 Nothing about the payload's meaning is guessed.
 
 Supported protocols: Ethernet, PROFINET, PROFIBUS DP/PA, Modbus RTU/TCP,
