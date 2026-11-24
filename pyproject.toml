@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyfieldbridge"
+version = "0.1.0"
+description = "Python conversion for industrial and automotive fieldbus frame envelopes"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Mohamed Mahmoud", email = "imohamed.abdelhamed@gmail.com"}]
+keywords = [
+    "industrial", "fieldbus", "protocol", "converter", "gateway",
+    "modbus", "profibus", "profinet", "ethercat", "can", "can-fd",
+    "lin", "flexray",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Networking",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/MAbdelhamid-Admin/PyfieldBridge"
+Repository = "https://github.com/MAbdelhamid-Admin/PyfieldBridge"
+Issues = "https://github.com/MAbdelhamid-Admin/PyfieldBridge/issues"
+"TypeScript implementation" = "https://github.com/MAbdelhamid-Admin/fieldBridge"
+
+[tool.setuptools.packages.find]
+include = ["fieldbridge*", "pyfieldbridge*"]
+
+[tool.setuptools.package-data]
+fieldbridge = ["py.typed"]
+pyfieldbridge = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
