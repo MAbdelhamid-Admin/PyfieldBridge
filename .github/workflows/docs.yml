@@ -30,6 +30,20 @@ jobs:
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -e ".[docs]"
       - run: pdoc -o site --no-show-source fieldbridge fieldbridge.wire
+      - name: Check for em and en dashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          offenders = []
+          for path in Path("site").rglob("*.html"):
+              text = path.read_text(encoding="utf-8")
+              for char, name in (("\u2013", "en dash"), ("\u2014", "em dash")):
+                  if char in text:
+                      offenders.append(f"{path}: {name}")
+          if offenders:
+              raise SystemExit("\n".join(offenders))
+          PY
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
