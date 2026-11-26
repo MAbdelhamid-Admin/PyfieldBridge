@@ -29,7 +29,7 @@ jobs:
           python-version: "3.12"
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -e ".[docs]"
-      - run: pdoc -o site fieldbridge fieldbridge.wire
+      - run: pdoc -o site --no-show-source fieldbridge fieldbridge.wire
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

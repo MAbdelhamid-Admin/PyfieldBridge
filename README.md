@@ -300,7 +300,7 @@ Build the documentation site locally:
 
 ```bash
 python -m pip install -e . "pdoc>=15"
-pdoc -o site fieldbridge fieldbridge.wire pyfieldbridge pyfieldbridge.wire
+pdoc -o site --no-show-source fieldbridge fieldbridge.wire
 ```
 
 Project layout:
